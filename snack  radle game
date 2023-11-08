@@ -1,0 +1,49 @@
+import random
+
+def roll_dice():
+    return random.randint(1, 6)
+
+def snakes_and_ladders():
+    player_position = 0
+    player_won = False
+
+    # Dictionary representing the positions of the snakes and ladders
+    snakes_ladders = {
+        4: 14,
+        9: 31,
+        17: 7,
+        20: 38,
+        28: 84,
+        40: 59,
+        51: 67,
+        63: 81,
+        64: 60,
+        71: 91,
+        87: 24,
+        93: 73,
+        95: 75,
+        99: 78
+    }
+
+    while not player_won:
+        input("Press Enter to roll the dice...")
+        dice_roll = roll_dice()
+        print(f"You rolled a {dice_roll}")
+
+        player_position += dice_roll
+
+        if player_position in snakes_ladders:
+            new_position = snakes_ladders[player_position]
+            if new_position > player_position:
+                print(f"Yay! You climbed a ladder from {player_position} to {new_position}")
+            else:
+                print(f"Oops! You got swallowed by a snake from {player_position} to {new_position}")
+            player_position = new_position
+
+        if player_position >= 100:
+            player_won = True
+            print("Congratulations! You've reached 100. You won!")
+        else:
+            print(f"Your current position is {player_position}")
+
+snakes_and_ladders()
