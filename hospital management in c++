@@ -27,12 +27,12 @@ public:
     void listPatients() {
         std::cout << "Patient Records:\n";
         for (const Patient& patient : patients) {
-            std::cout << "Name: " << patient.name << std::endl;
-            std::cout << "Age: " << patient.age << std::endl;
-            std::cout << "Gender: " << patient.gender << std::endl;
-            std::cout << "Address: " << patient.address << std::endl;
-            std::cout << "Phone: " << patient.phone << std::endl;
-            std::cout << "Appointment Date: " << patient.appointmentDate << std::endl;
+            std::cout << "NAME: " << patient.name << std::endl;
+            std::cout << "AGE: " << patient.age << std::endl;
+            std::cout << "GENDER: " << patient.gender << std::endl;
+            std::cout << "ADDRESS: " << patient.address << std::endl;
+            std::cout << "PHONE: " << patient.phone << std::endl;
+            std::cout << "APPOINMENT DATE: " << patient.appointmentDate << std::endl;
             std::cout << "-------------------------" << std::endl;
         }
     }
