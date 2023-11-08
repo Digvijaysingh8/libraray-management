@@ -44,7 +44,7 @@ int main() {
     while (true) {
         int choice;
         std::cout << "Hospital Management System\n";
-        std::cout << "1. Add a Patient\n";
+        std::cout << "1. Add a Patiient\n";
         std::cout << "2. List Patients\n";
         std::cout << "0. Exit\n";
         std::cout << "Enter your choice: ";
